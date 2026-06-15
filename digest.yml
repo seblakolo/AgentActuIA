@@ -1,0 +1,49 @@
+name: weekly-digest
+
+on:
+  schedule:
+    # 05:00 UTC le samedi ≈ 07:00 Paris (été) / 06:00 (hiver). Ajuste si besoin.
+    - cron: "0 5 * * 6"
+  workflow_dispatch: # bouton "Run workflow" pour tester à la demande
+
+permissions:
+  contents: write # committer le digest + la page
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm ci || npm install
+
+      # 1) Génère le Markdown + la page HTML (n'envoie rien)
+      - name: Build digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURATION_MODEL: claude-opus-4-8
+        run: npm run build
+
+      # 2) Publie (Pages sert le dossier docs/ sur la branche main)
+      - name: Commit & push
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "actions@github.com"
+          git add digests/ docs/
+          git commit -m "digest: $(date -u +%Y-%m-%d)" || echo "rien à committer"
+          git push
+
+      # 3) Laisse Pages se déployer, puis envoie le teaser WhatsApp avec le lien
+      - name: Attendre la publication Pages
+        run: sleep 75
+
+      - name: Notify WhatsApp
+        env:
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+        run: npm run notify
