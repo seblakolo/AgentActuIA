@@ -1,81 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr"><head>
+<!DOCTYPE html><html lang="fr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L'Actu IA — mardi 16 juin 2026</title>
 <style>
-  :root{--paper:#f5f1e8;--ink:#16130d;--soft:#4a4338;--rule:#cfc6b3;--accent:#8d2b1f;--serif:Georgia,"Iowan Old Style","Times New Roman",serif}
+  :root{--paper:#f3efe4;--ink:#14110b;--soft:#534b3d;--rule:#c7bda7;--accent:#8a2a1d;--serif:Georgia,"Iowan Old Style","Times New Roman",serif}
   *{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.62}
-  .sheet{max-width:740px;margin:0 auto;padding:36px 24px 90px}
-  .mast{text-align:center;border-bottom:3px double var(--ink);padding-bottom:14px}
-  .mast .eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .mast h1{font-size:clamp(40px,11vw,72px);line-height:.92;margin:.12em 0 .08em;letter-spacing:-.02em;font-weight:700}
-  .mast .tagline{font-style:italic;color:var(--soft);font-size:15px}
-  .folio{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:7px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
-  .folio span:nth-child(2){text-align:center;flex:1}
-  h2{font-size:13px;letter-spacing:.26em;text-transform:uppercase;text-align:center;font-weight:700;color:var(--ink);margin:54px 0 8px}
-  h2::before{content:"";display:block;border-top:1px solid var(--rule);margin-bottom:14px}
-  h2 + *{margin-top:18px}
-  h3{font-size:23px;line-height:1.18;font-weight:700;margin:30px 0 6px;letter-spacing:-.01em}
-  h3 + p{margin-top:4px}
-  h3 ~ h3,h2 + h3{border-top:1px solid var(--rule);padding-top:26px}
-  h2 + h3{border-top:0;padding-top:6px}
-  p{font-size:17.5px;margin:12px 0;color:#221d15;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-  ul{padding-left:1.1em;margin:12px 0} li{margin:8px 0;font-size:17px}
-  strong{font-weight:700} em{font-style:italic;color:var(--soft)}
-  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(141,43,31,.32)} a:hover{border-bottom-color:var(--accent)}
-  blockquote{margin:14px 0;padding:2px 0 2px 16px;border-left:3px solid var(--accent);color:var(--soft);font-style:italic}
-  hr{border:0;border-top:1px solid var(--rule);margin:34px 0}
-  code{background:#e9e3d4;padding:1px 5px;border-radius:3px;font-size:14px}
-  .colophon{margin-top:64px;border-top:3px double var(--ink);padding-top:12px;font-size:12px;color:var(--soft);text-align:center;letter-spacing:.04em}
-  @media (max-width:560px){p,li{text-align:left;hyphens:none}.folio{flex-direction:column;gap:4px}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.5}
+  .sheet{max-width:860px;margin:0 auto;padding:30px 26px 90px}
+  .mast{text-align:center;border-bottom:4px double var(--ink);padding-bottom:12px}
+  .mast .eyebrow{font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .mast h1{font-size:clamp(46px,13vw,92px);line-height:.9;margin:.08em 0 .04em;letter-spacing:-.02em;font-weight:700}
+  .mast .tag{font-style:italic;color:var(--soft);font-size:15px}
+  .folio{display:flex;justify-content:space-between;gap:12px;margin-top:12px;padding:6px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+  .folio span:nth-child(2){flex:1;text-align:center}
+  .band{display:flex;align-items:center;gap:14px;margin:46px 0 14px}
+  .band::before,.band::after{content:"";flex:1;border-top:2px solid var(--ink)}
+  .band span{font-size:13px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+  .note{font-style:italic;color:var(--soft);margin:8px 0 0}
+  .lead{margin:6px 0 8px}
+  .lead h2{font-size:clamp(30px,5.4vw,42px);line-height:1.06;margin:.1em 0 .18em;font-weight:700;letter-spacing:-.015em}
+  .lead.major h2::before{content:"À LA UNE";display:block;font-size:11px;letter-spacing:.22em;color:var(--accent);margin-bottom:8px;font-style:normal;font-family:var(--serif)}
+  .lead-body p{font-size:18px;line-height:1.55;text-align:justify;hyphens:auto;-webkit-hyphens:auto;margin:0}
+  .lead-body p:first-child::first-letter{float:left;font-size:3.3em;line-height:.74;padding:6px 10px 0 0;font-weight:700}
+  .cols{column-count:2;column-gap:30px;column-rule:1px solid var(--rule);margin-top:6px}
+  .art{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+  .art h3{font-size:19px;line-height:1.16;margin:0 0 4px;font-weight:700;letter-spacing:-.01em}
+  .art.major h3{border-top:2px solid var(--accent);padding-top:8px}
+  .art p{font-size:15.5px;line-height:1.5;margin:4px 0 0;text-align:justify;hyphens:auto;-webkit-hyphens:auto;color:#241f16}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(138,42,29,.3)} a:hover{border-bottom-color:var(--accent)}
+  em{font-style:italic;color:var(--soft)} strong{font-weight:700}
+  .colophon{margin-top:60px;border-top:4px double var(--ink);padding-top:12px;font-size:12px;color:var(--soft);text-align:center}
+  @media (max-width:600px){.cols{column-count:1}.folio{flex-direction:column;gap:3px}.art p,.lead-body p{text-align:left;hyphens:none}}
 </style></head><body>
-  <main class="sheet">
-    <header class="mast">
-      <div class="eyebrow">Hebdomadaire · IA · Photo-Vidéo · Design</div>
-      <h1>L'Actu&nbsp;IA</h1>
-      <div class="tagline">« Humain + IA &gt; IA seule »</div>
-      <div class="folio"><span>mardi 16 juin 2026</span><span>Édition de la semaine</span><span>N°&nbsp;25</span></div>
-    </header>
-    <article><h1>L&#39;Actu IA — 2026-06-16</h1>
-<h2>IA / LLM</h2>
-<h3>Washington débranche Fable 5 et Mythos 5</h3>
-<p>Sur ordre d&#39;export de la Maison-Blanche — motivé par la crainte d&#39;un accès chinois —, Anthropic a coupé l&#39;accès à ses deux derniers modèles pour tous les ressortissants étrangers, employés compris : du jamais-vu pour un modèle de pointe, et un argument en or pour l&#39;IA souveraine. <a href="https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown">The Verge</a></p>
-<h3>🔥 GLM 5.2</h3>
-<p>Zhipu pousse une nouvelle version de son modèle ouvert, en tête de Hacker News : l&#39;open chinois continue de coller aux frontier models. <a href="https://twitter.com/jietang/status/2065784751345287314">HN</a></p>
-<h3>🔥 Gemma 4 12B, multimodal unifié et sans encodeur</h3>
-<p>DeepMind fond vision et texte dans une seule architecture sans encodeur d&#39;image séparé — plus simple à servir. <a href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/">Google DeepMind</a></p>
-<h3>DiffusionGemma : génération de texte 4× plus rapide</h3>
-<p>Une approche par diffusion qui casse le goulot du décodage autorégressif, déjà intégrée à <code>transformers</code> v5.11. <a href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/">Google DeepMind</a></p>
-<h3>Gemini 3.5 Live Translate, la traduction vocale quasi temps réel</h3>
-<p>Traduction de la parole fluide et naturelle, déployée dans Google Translate, Meet et AI Studio. <a href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/">Google DeepMind</a></p>
-<h3>Siri tournera sur Gemini</h3>
-<p>Apple confirme que son assistant repose désormais sur les modèles de Google — un aveu de retard qui redessine le marché des assistants. <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxObTlGQ044SjlnSG9adEpPRzkxTXk5aGJnSzFKbnhBbjhNSDZ3MkVkMEVwdXpuSXB4bEx6QmMzcFRvc3hvOTdRNDYxOEJCYThqby0xLUVYcy14SzREa1RtTDVlRTBqQnFtZnpMTm5haW5HWkhaUWV2RWxCRDQ5cUZITWxRUV9pdWFWcXVTSVlpbVFtekZvNkNCeWVmeERMeENCc3o2bk5kZGE?oc=5">9to5Mac</a></p>
-<h3>Mistral lève 3 Md€ à 20 Md€ de valorisation</h3>
-<p>Le champion européen profite de l&#39;onde de choc du blocage d&#39;Anthropic pour boucler un tour massif et financer son infrastructure. <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOZHVWYkhTVmdsTkxHQzQ1Qkd3MnlMZDhVaGg1d0ZKem5yQzFNOGVpMHlybzNKU0MxWjE5VjI0SEpoNTBVWmtUbUZYS3lKTzF5UHMxWGM3dHFaRVc0YkN2NnNfS18wWFl4U1VQV1V2ejdjMWZKaXJvdzBtRXlwOVFpajFrLXh1aGhkbDFydVZ2TWEyZw?oc=5">TechCrunch</a></p>
-<h3>OpenAI rachète Ona pour muscler Codex</h3>
-<p>L&#39;acquisition apporte des environnements cloud persistants pour faire tourner des agents long-running : la bataille se déplace vers l&#39;infra d&#39;exécution. <a href="https://openai.com/index/openai-to-acquire-ona">OpenAI</a></p>
-<h2>Photo &amp; Vidéo</h2>
-<h3>Lionsgate entre au capital de Runway</h3>
-<p>Un grand studio hollywoodien prend une participation dans Runway : le rapprochement entre cinéma traditionnel et génération vidéo s&#39;accélère. <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBLMlpVSkpUNTI0eFJBMWp5eDM1QUozbldPX1MtRVlCV0R4WEI5V0kxYzBqZmlxV3NzbUdvc210UVFtTFJzcHlwc0lfVlFKMkZfZ2tXR3dNcG9hcjJMbXJ5dUZkeUMtU3c2X0lpbDVOV2ZJdw?oc=5">TheFutureParty</a></p>
-<h3>MiniMax lance son hub vidéo tout-en-un</h3>
-<p>Présenté au festival de Shanghai, l&#39;outil regroupe la chaîne de production vidéo IA — avec la mise en garde que la direction créative doit rester humaine. <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMjVyWHN0VjZreEhqQ1Vsa2tRZk5RQl82SUd0cG9UeENCZmY0YnlkOEh4RXR6U25wS20zRF85LVhDd0Q0QW5tNXlEMWx0QXgzRG5qQy12d2hwTHpSUjhtVzg5c25tZS05NXhmXzI2OTBpWFZBT1hhcXBUTGhiU1dBcTNkZzY3OHpHYjFOS1lGeENaSllQMWFPeDMtUndpXzdwVHFraXB2MEw?oc=5">Variety</a></p>
-<h3>Reve 2.0 mise sur le contrôle de la mise en page</h3>
-<p>La nouvelle version se positionne comme le générateur d&#39;images le plus précis pour maîtriser le layout — un angle qui parle aux designers. <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOMXNodEhmSkRrOUVobTJ2Y3cwUkNwZkJSX09zNDcyVjBGUGwyTHh4djZ3aEJXWC13c2FiOGNrbE1hWlpwYTBvWVBQMTlCNHJ0enpmZS1QTEVpVzFwYmFfc1ExNHBxcXNHbEFOX291M3kyckR5UXVxd051SjZEeEVIUjNzVmdrQzBqQ3I3Tw?oc=5">Decrypt</a></p>
-<h3>Sora 2 : Nintendo monte au créneau</h3>
-<p>Nintendo réagit aux vidéos contrefaisantes générées par Sora, qu&#39;Altman qualifie de « fan fiction interactive » : le bras de fer sur le droit d&#39;auteur s&#39;envenime. <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4eFRpNEtOTGlyb1pVYnZ4VXZPWlkzUm5rdjEzRmRkbTlLSFJWV21jRmM4eGpXTFRaSlpVSmFjYU9VcmdpOVF0T0FwU2VyeG53?oc=5">Toy People</a></p>
-<h2>Design &amp; outils</h2>
-<h3>Glisser une page web directement dans Figma</h3>
-<p>La nouvelle extension Chrome d&#39;html.to.design capture une page entière à coller en Ctrl+V dans Figma, prête à éditer. <a href="https://bit.ly/side-div6">Sidebar</a></p>
-<h3>Extend UI, un kit open source pour les apps documentaires</h3>
-<p>Composants React pour visionner PDF, DOCX, XLSX et CSV, gérer l&#39;upload et la signature électronique. <a href="https://www.extend.ai/ui">Sidebar</a></p>
-<h3>Vibe coder ou ingénieur logiciel</h3>
-<p>Le vibe coding excelle pour explorer, mais l&#39;ingénierie commence quand le code généré doit être relu, possédé et modifié sans casse. <a href="https://yusufaytas.com/vibe-coder-vs-software-engineer">Sidebar</a></p>
-<h3>Le vrai goulot, c&#39;est décider quoi construire</h3>
-<p>Les agents ont rendu le code bon marché et exposé le seul problème qui restait : savoir quoi bâtir. <a href="https://kasperjunge.com/blog/should-pms-code-with-agents/">Sidebar</a></p>
-<h3>Words of Type</h3>
-<p>Une encyclopédie multilingue des termes typographiques, à garder sous la main. <a href="https://wiki.wordsoftype.com/">Sidebar</a></p>
-</article>
-    <div class="colophon">Curation automatique · sources : flux officiels, Google News, GitHub, Hacker News, Reddit.</div>
-  </main>
-</body></html>
+<main class="sheet">
+  <header class="mast">
+    <div class="eyebrow">Le journal hebdomadaire de l'intelligence artificielle</div>
+    <h1>L'Actu&nbsp;IA</h1>
+    <div class="tag">« Humain + IA &gt; IA seule »</div>
+    <div class="folio"><span>mardi 16 juin 2026</span><span>Édition de la semaine</span><span>N°&nbsp;25</span></div>
+  </header>
+  <div class="band"><span>IA / LLM</span></div><article class="lead major"><h2>🔥 Washington débranche Fable 5 et Mythos 5</h2><div class="lead-body"><p>Sur ordre d&#39;export de la Maison-Blanche — motivé par la crainte d&#39;un accès chinois —, Anthropic a coupé l&#39;accès à ses deux derniers modèles pour tous les ressortissants étrangers, employés compris : du jamais-vu pour un modèle de pointe, et un argument en or pour l&#39;IA souveraine. <a href="https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown">The Verge</a></p></div></article><div class="cols"><article class="art major"><h3>🔥 GLM 5.2</h3><p>Zhipu pousse une nouvelle version de son modèle ouvert, en tête de Hacker News : l&#39;open chinois continue de coller aux frontier models. <a href="https://twitter.com/jietang/status/2065784751345287314">HN</a></p></article><article class="art major"><h3>🔥 Gemma 4 12B, multimodal unifié et sans encodeur</h3><p>DeepMind fond vision et texte dans une seule architecture sans encodeur d&#39;image séparé — plus simple à servir. <a href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/">Google DeepMind</a></p></article><article class="art"><h3>DiffusionGemma : génération de texte 4× plus rapide</h3><p>Une approche par diffusion qui casse le goulot du décodage autorégressif, déjà intégrée à <code>transformers</code> v5.11. <a href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/">Google DeepMind</a></p></article><article class="art"><h3>Gemini 3.5 Live Translate, la traduction vocale quasi temps réel</h3><p>Traduction de la parole fluide et naturelle, déployée dans Google Translate, Meet et AI Studio. <a href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/">Google DeepMind</a></p></article><article class="art"><h3>Siri tournera sur Gemini</h3><p>Apple confirme que son assistant repose désormais sur les modèles de Google — un aveu de retard qui redessine le marché des assistants. <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxObTlGQ044SjlnSG9adEpPRzkxTXk5aGJnSzFKbnhBbjhNSDZ3MkVkMEVwdXpuSXB4bEx6QmMzcFRvc3hvOTdRNDYxOEJCYThqby0xLUVYcy14SzREa1RtTDVlRTBqQnFtZnpMTm5haW5HWkhaUWV2RWxCRDQ5cUZITWxRUV9pdWFWcXVTSVlpbVFtekZvNkNCeWVmeERMeENCc3o2bk5kZGE?oc=5">9to5Mac</a></p></article><article class="art"><h3>Mistral lève 3 Md€ à 20 Md€ de valorisation</h3><p>Le champion européen profite de l&#39;onde de choc du blocage d&#39;Anthropic pour boucler un tour massif et financer son infrastructure. <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOZHVWYkhTVmdsTkxHQzQ1Qkd3MnlMZDhVaGg1d0ZKem5yQzFNOGVpMHlybzNKU0MxWjE5VjI0SEpoNTBVWmtUbUZYS3lKTzF5UHMxWGM3dHFaRVc0YkN2NnNfS18wWFl4U1VQV1V2ejdjMWZKaXJvdzBtRXlwOVFpajFrLXh1aGhkbDFydVZ2TWEyZw?oc=5">TechCrunch</a></p></article><article class="art"><h3>OpenAI rachète Ona pour muscler Codex</h3><p>L&#39;acquisition apporte des environnements cloud persistants pour faire tourner des agents long-running : la bataille se déplace vers l&#39;infra d&#39;exécution. <a href="https://openai.com/index/openai-to-acquire-ona">OpenAI</a></p></article></div><div class="band"><span>Photo &amp; Vidéo</span></div><div class="cols"><article class="art"><h3>Lionsgate entre au capital de Runway</h3><p>Un grand studio hollywoodien prend une participation dans Runway : le rapprochement entre cinéma traditionnel et génération vidéo s&#39;accélère. <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBLMlpVSkpUNTI0eFJBMWp5eDM1QUozbldPX1MtRVlCV0R4WEI5V0kxYzBqZmlxV3NzbUdvc210UVFtTFJzcHlwc0lfVlFKMkZfZ2tXR3dNcG9hcjJMbXJ5dUZkeUMtU3c2X0lpbDVOV2ZJdw?oc=5">TheFutureParty</a></p></article><article class="art"><h3>MiniMax lance son hub vidéo tout-en-un</h3><p>Présenté au festival de Shanghai, l&#39;outil regroupe la chaîne de production vidéo IA — avec la mise en garde que la direction créative doit rester humaine. <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMjVyWHN0VjZreEhqQ1Vsa2tRZk5RQl82SUd0cG9UeENCZmY0YnlkOEh4RXR6U25wS20zRF85LVhDd0Q0QW5tNXlEMWx0QXgzRG5qQy12d2hwTHpSUjhtVzg5c25tZS05NXhmXzI2OTBpWFZBT1hhcXBUTGhiU1dBcTNkZzY3OHpHYjFOS1lGeENaSllQMWFPeDMtUndpXzdwVHFraXB2MEw?oc=5">Variety</a></p></article><article class="art"><h3>Reve 2.0 mise sur le contrôle de la mise en page</h3><p>La nouvelle version se positionne comme le générateur d&#39;images le plus précis pour maîtriser le layout — un angle qui parle aux designers. <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOMXNodEhmSkRrOUVobTJ2Y3cwUkNwZkJSX09zNDcyVjBGUGwyTHh4djZ3aEJXWC13c2FiOGNrbE1hWlpwYTBvWVBQMTlCNHJ0enpmZS1QTEVpVzFwYmFfc1ExNHBxcXNHbEFOX291M3kyckR5UXVxd051SjZEeEVIUjNzVmdrQzBqQ3I3Tw?oc=5">Decrypt</a></p></article><article class="art"><h3>Sora 2 : Nintendo monte au créneau</h3><p>Nintendo réagit aux vidéos contrefaisantes générées par Sora, qu&#39;Altman qualifie de « fan fiction interactive » : le bras de fer sur le droit d&#39;auteur s&#39;envenime. <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4eFRpNEtOTGlyb1pVYnZ4VXZPWlkzUm5rdjEzRmRkbTlLSFJWV21jRmM4eGpXTFRaSlpVSmFjYU9VcmdpOVF0T0FwU2VyeG53?oc=5">Toy People</a></p></article></div><div class="band"><span>Design &amp; outils</span></div><div class="cols"><article class="art"><h3>Glisser une page web directement dans Figma</h3><p>La nouvelle extension Chrome d&#39;html.to.design capture une page entière à coller en Ctrl+V dans Figma, prête à éditer. <a href="https://bit.ly/side-div6">Sidebar</a></p></article><article class="art"><h3>Extend UI, un kit open source pour les apps documentaires</h3><p>Composants React pour visionner PDF, DOCX, XLSX et CSV, gérer l&#39;upload et la signature électronique. <a href="https://www.extend.ai/ui">Sidebar</a></p></article><article class="art"><h3>Vibe coder ou ingénieur logiciel</h3><p>Le vibe coding excelle pour explorer, mais l&#39;ingénierie commence quand le code généré doit être relu, possédé et modifié sans casse. <a href="https://yusufaytas.com/vibe-coder-vs-software-engineer">Sidebar</a></p></article><article class="art"><h3>Le vrai goulot, c&#39;est décider quoi construire</h3><p>Les agents ont rendu le code bon marché et exposé le seul problème qui restait : savoir quoi bâtir. <a href="https://kasperjunge.com/blog/should-pms-code-with-agents/">Sidebar</a></p></article><article class="art"><h3>Words of Type</h3><p>Une encyclopédie multilingue des termes typographiques, à garder sous la main. <a href="https://wiki.wordsoftype.com/">Sidebar</a></p></article></div>
+  <div class="colophon">Curation automatique · sources : flux officiels, Google News, GitHub, Hacker News.</div>
+</main></body></html>
