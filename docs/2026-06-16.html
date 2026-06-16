@@ -1,63 +1,74 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digest IA — 2026-06-16</title>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Actu IA — mardi 16 juin 2026</title>
 <style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: #faf8f3; color: #1c1a17;
-    font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.7; -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 96px; }
-  .kicker { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #b45309; font-weight: 600; }
-  h1 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; font-size: 34px; line-height: 1.15; margin: 6px 0 4px; }
-  .date { color: #6b655c; font-size: 15px; margin-bottom: 40px; }
-  h2 {
-    font-family: Georgia, "Iowan Old Style", serif; font-size: 24px; margin: 48px 0 8px;
-    padding-top: 22px; border-top: 1px solid #e7e1d6;
-  }
-  h3 { font-size: 18px; margin: 28px 0 4px; }
-  p { margin: 12px 0; }
-  a { color: #b45309; text-decoration: none; border-bottom: 1px solid #e7e1d6; }
-  a:hover { border-color: #b45309; }
-  ul { padding-left: 20px; }
-  li { margin: 10px 0; }
-  /* met en valeur les lignes "sorties majeures" 🔥 */
-  li:has(> :first-child) { }
-  hr { border: 0; border-top: 1px solid #e7e1d6; margin: 40px 0; }
-  code { background: #f1ece1; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-  .foot { margin-top: 64px; color: #6b655c; font-size: 13px; border-top: 1px solid #e7e1d6; padding-top: 16px; }
-</style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="kicker">Digest hebdomadaire</div>
-    <h1>IA · Photo-Vidéo · Design</h1>
-    <div class="date">2026-06-16</div>
-    <h1>Digest IA — 2026-06-16</h1>
+  :root{--paper:#f5f1e8;--ink:#16130d;--soft:#4a4338;--rule:#cfc6b3;--accent:#8d2b1f;--serif:Georgia,"Iowan Old Style","Times New Roman",serif}
+  *{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.62}
+  .sheet{max-width:740px;margin:0 auto;padding:36px 24px 90px}
+  .mast{text-align:center;border-bottom:3px double var(--ink);padding-bottom:14px}
+  .mast .eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .mast h1{font-size:clamp(40px,11vw,72px);line-height:.92;margin:.12em 0 .08em;letter-spacing:-.02em;font-weight:700}
+  .mast .tagline{font-style:italic;color:var(--soft);font-size:15px}
+  .folio{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:7px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+  .folio span:nth-child(2){text-align:center;flex:1}
+  h2{font-size:13px;letter-spacing:.26em;text-transform:uppercase;text-align:center;font-weight:700;color:var(--ink);margin:54px 0 8px}
+  h2::before{content:"";display:block;border-top:1px solid var(--rule);margin-bottom:14px}
+  h2 + *{margin-top:18px}
+  h3{font-size:23px;line-height:1.18;font-weight:700;margin:30px 0 6px;letter-spacing:-.01em}
+  h3 + p{margin-top:4px}
+  h3 ~ h3,h2 + h3{border-top:1px solid var(--rule);padding-top:26px}
+  h2 + h3{border-top:0;padding-top:6px}
+  p{font-size:17.5px;margin:12px 0;color:#221d15;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  ul{padding-left:1.1em;margin:12px 0} li{margin:8px 0;font-size:17px}
+  strong{font-weight:700} em{font-style:italic;color:var(--soft)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(141,43,31,.32)} a:hover{border-bottom-color:var(--accent)}
+  blockquote{margin:14px 0;padding:2px 0 2px 16px;border-left:3px solid var(--accent);color:var(--soft);font-style:italic}
+  hr{border:0;border-top:1px solid var(--rule);margin:34px 0}
+  code{background:#e9e3d4;padding:1px 5px;border-radius:3px;font-size:14px}
+  .colophon{margin-top:64px;border-top:3px double var(--ink);padding-top:12px;font-size:12px;color:var(--soft);text-align:center;letter-spacing:.04em}
+  @media (max-width:560px){p,li{text-align:left;hyphens:none}.folio{flex-direction:column;gap:4px}}
+</style></head><body>
+  <main class="sheet">
+    <header class="mast">
+      <div class="eyebrow">Hebdomadaire · IA · Photo-Vidéo · Design</div>
+      <h1>L'Actu&nbsp;IA</h1>
+      <div class="tagline">« Humain + IA &gt; IA seule »</div>
+      <div class="folio"><span>mardi 16 juin 2026</span><span>Édition de la semaine</span><span>N°&nbsp;25</span></div>
+    </header>
+    <article><h1>L&#39;Actu IA — 2026-06-16</h1>
 <h2>IA / LLM</h2>
-<p>🔥 <strong>GLM 5.2</strong> — Nouvelle version du modèle de Zhipu, déjà en tête de HN : la concurrence open/chinoise continue de réduire l&#39;écart avec les frontier models. <a href="https://twitter.com/jietang/status/2065784751345287314">HN</a></p>
-<p>🔥 <strong>Gemma 4 12B</strong> — DeepMind sort un multimodal unifié « encoder-free », signe que l&#39;archi converge vers du tout-en-un plus simple à servir. <a href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/">DeepMind</a></p>
-<p><strong>Anthropic coupe Fable 5 et Mythos 5 sur ordre de la Maison-Blanche</strong> — Washington impose un blocage d&#39;accès aux étrangers (employés inclus) pour raisons de sécurité nationale ; un précédent lourd pour quiconque construit sur une API US. <a href="https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security">The Verge</a></p>
-<p><strong>DiffusionGemma</strong> — Génération de texte par diffusion ~4× plus rapide, déjà intégrée à <code>transformers</code> v5.11 : une voie crédible pour réduire la latence de décodage. <a href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/">DeepMind</a></p>
-<p><strong>Claude Fable « relentlessly proactive »</strong> — Le retour de Simon Willison pointe un modèle qui prend l&#39;initiative plus qu&#39;avant — à tester si tu l&#39;intègres dans des agents. <a href="https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/">simonwillison.net</a></p>
-<p><strong>OpenAI rachète Ona</strong> — Codex gagne des environnements cloud persistants pour faire tourner des agents long-running : la bataille se déplace vers l&#39;infra d&#39;exécution, pas juste le modèle. <a href="https://openai.com/index/openai-to-acquire-ona">OpenAI</a></p>
-<p><strong>Gemini 3.5 Live Translate</strong> — Traduction vocale quasi temps réel dans Translate et Meet, utile si tu testes des produits multilingues. <a href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/">DeepMind</a></p>
-<p><strong>MiniMax-M3-VL</strong> — Variante vision ajoutée dans <code>transformers</code> v5.12, à surveiller côté open multimodal. <a href="https://github.com/huggingface/transformers/releases/tag/v5.12.0">GitHub</a></p>
+<h3>Anthropic coupe l&#39;accès à Fable 5 et Mythos 5 sur ordre de Washington</h3>
+<p>La Maison-Blanche a exigé de bloquer ces modèles pour tous les ressortissants étrangers — employés d&#39;Anthropic compris — par crainte d&#39;un accès chinois, ravivant le débat sur une IA souveraine non américaine. <a href="https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security">The Verge</a></p>
+<h3>🔥 GLM 5.2 est sorti</h3>
+<p>Zhipu pousse une nouvelle version de son modèle ouvert, en tête de Hacker News, et l&#39;open chinois continue de coller aux frontier models. <a href="https://twitter.com/jietang/status/2065784751345287314">HN</a></p>
+<h3>🔥 Gemma 4 12B, multimodal unifié et sans encodeur</h3>
+<p>DeepMind fond vision et texte dans une seule architecture sans encodeur d&#39;image séparé, plus simple à servir. <a href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/">Google DeepMind</a></p>
+<h3>DiffusionGemma : génération de texte 4× plus rapide</h3>
+<p>Une approche par diffusion qui casse le goulot du décodage autorégressif, déjà intégrée à <code>transformers</code> v5.11. <a href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/">Google DeepMind</a></p>
+<h3>Gemini 3.5 Live Translate, la traduction vocale quasi temps réel</h3>
+<p>Traduction de la parole fluide et naturelle, déployée dans Google Translate, Meet et AI Studio. <a href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/">Google DeepMind</a></p>
+<h3>Claude Fable, « obstinément proactif »</h3>
+<p>Simon Willison décortique un modèle qui prend l&#39;initiative bien plus que ses prédécesseurs — à tester avant de l&#39;embarquer dans des agents. <a href="https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/">Simon Willison</a></p>
+<h3>OpenAI rachète Ona pour muscler Codex</h3>
+<p>L&#39;acquisition apporte des environnements cloud persistants pour faire tourner des agents long-running : la bataille se déplace vers l&#39;infra d&#39;exécution. <a href="https://openai.com/index/openai-to-acquire-ona">OpenAI</a></p>
+<h3>OpenAI documente des opérations d&#39;influence liées à Pékin</h3>
+<p>Le rapport décrit l&#39;usage de l&#39;IA pour peser sur les débats américains autour des data centers, des tarifs et de ChatGPT. <a href="https://openai.com/index/prc-linked-influence-operations-ai-debates">OpenAI</a></p>
 <h2>Photo &amp; Vidéo</h2>
-<p>Rien de notable cette semaine.</p>
+<p><em>Rien de notable cette semaine.</em></p>
 <h2>Design &amp; outils</h2>
-<p><strong>html.to.design</strong> — Nouvelle extension Chrome : capture une page web entière et colle-la directement éditable dans Figma. Gain de temps réel pour reconstruire un layout. <a href="https://bit.ly/side-div6">Sidebar</a></p>
-<p><strong>Extend UI</strong> — Kit UI open source (React) pour apps documentaires : viewers PDF/DOCX/XLSX/CSV, upload, e-signature. À piocher si tu construis du SaaS doc. <a href="https://www.extend.ai/ui">extend.ai</a></p>
-<p><strong>Les quatre métiers du design créés par l&#39;IA</strong> — La NN/g découpe « l&#39;AI design » en quatre rôles distincts : utile pour cadrer un recrutement ou ton propre positionnement. <a href="https://www.nngroup.com/articles/design-jobs-ai-created/">NN/g</a></p>
-<p><strong>Discovery vs Delivery</strong> — Coder est devenu cheap ; le vrai goulot reste <em>décider quoi construire</em>. Une lecture qui recadre la priorité produit à l&#39;ère des agents. <a href="https://buzzusborne.com/writing/discovery-delivery/">buzzusborne.com</a></p>
-<p><strong>Boneyard</strong> — Skeleton screens pixel-perfect extraits de ton vrai DOM, zéro config, zéro layout shift. <a href="https://boneyard.vercel.app/overview">boneyard.vercel.app</a></p>
-
-    <div class="foot">Généré automatiquement · curation Claude Opus · sources curées + GitHub + Hacker News + Reddit.</div>
-  </div>
-</body>
-</html>
+<h3>Glisser une page web directement dans Figma</h3>
+<p>La nouvelle extension Chrome d&#39;html.to.design capture une page entière à coller en Ctrl+V dans Figma, prête à éditer. <a href="https://bit.ly/side-div6">Sidebar</a></p>
+<h3>Les quatre métiers du design créés par l&#39;IA</h3>
+<p>Le « design IA » n&#39;est pas un seul rôle : la Nielsen Norman Group le découpe en quatre types de travail distincts, utile pour cadrer un recrutement. <a href="https://www.nngroup.com/articles/design-jobs-ai-created/">Sidebar</a></p>
+<h3>Du verre pour le web, après le « Liquid Glass » de la WWDC</h3>
+<p>Retour technique sur la fabrication d&#39;un effet verre cross-browser, dans le sillage du nouveau langage visuel d&#39;Apple. <a href="https://aave.com/design/building-glass-for-the-web">Sidebar</a></p>
+<h3>Extend UI, un kit open source pour les apps documentaires</h3>
+<p>Composants React pour visionner PDF, DOCX, XLSX et CSV, gérer l&#39;upload et la signature électronique. <a href="https://www.extend.ai/ui">Sidebar</a></p>
+<h3>Une spécification ouverte pour « un bon site web »</h3>
+<p>Un référentiel agnostique des fonctionnalités techniques attendues d&#39;un site, construit en open source sous licence MIT. <a href="https://specification.website/">Sidebar</a></p>
+</article>
+    <div class="colophon">Curation automatique · sources : flux officiels, Google News, GitHub, Hacker News, Reddit.</div>
+  </main>
+</body></html>
