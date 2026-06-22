@@ -3,3 +3,4 @@ node_modules/
 *.log
 digests/.latest.json
 .DS_Store
+recipients.json
